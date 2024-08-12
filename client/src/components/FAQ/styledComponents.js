@@ -1,19 +1,27 @@
 import styled from "styled-components";
 
 export const AccordionContainer = styled.div`
-  width: 90%;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f9f9fb;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 `;
 
 export const AccordionDetails = styled.details`
-  font-size: 1rem;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
+  margin: 0;
   border-bottom: 1px solid #e4e4e7;
   transition: all 0.3s ease-in-out;
+  background-color: #fff;
 
   &:hover {
-    opacity: 1;
+    background-color: #f1f1f3;
+  }
+
+  &[open] {
+    background-color: #e8e8ea;
   }
 
   &[open] svg {
@@ -27,18 +35,13 @@ export const AccordionSummary = styled.summary`
   list-style: none;
   display: flex;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
 
   &:hover {
-    text-decoration: underline;
-  }
-
-  &:hover .accordion-title {
-    opacity: 1;
-  }
-
-  &:hover .accordion-icon {
-    opacity: 1;
+    background-color: #ececf1;
   }
 
   &::-webkit-details-marker {
@@ -48,29 +51,29 @@ export const AccordionSummary = styled.summary`
 
 export const AccordionTitle = styled.span`
   color: #151518;
-  width: 90%;
-  font-weight: 500;
-  transition: all 250ms ease-in-out;
+  width: 100%;
+  transition: color 250ms ease-in-out;
 `;
 
 export const AccordionIcon = styled.span`
-  opacity: 0.5;
-  pointer-events: none;
-  position: absolute;
-  right: 1rem;
-  transition: all 150ms ease-out;
+  opacity: 0.8;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
 
   svg {
     width: 1.5rem;
     height: 1.5rem;
-    transition: transform 0.3s ease-in-out;
   }
 `;
 
 export const AccordionContent = styled.div`
   color: #3c3e47;
-  padding: 0.2rem 0rem 1rem;
-  font-size: 0.95rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.65;
+  background-color: #fafafa;
+  border-radius: 0 0 12px 12px;
+  transition: max-height 0.3s ease-in-out;
 `;

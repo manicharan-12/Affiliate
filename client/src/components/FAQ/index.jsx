@@ -38,7 +38,7 @@ const accordionData = [
 const Accordion = () => {
   return (
     <div style={{padding:"24px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
-    <h1>Frequently Asked Questions</h1>
+      <h1 style={{marginBottom: "20px", color: "#333", fontSize: "1.75rem"}}>Frequently Asked Questions</h1>
     <AccordionContainer>
       {accordionData.map((item, index) => (
         <AccordionDetails key={index}>

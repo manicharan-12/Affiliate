@@ -3,8 +3,7 @@ import mask3 from '../../assets/Mask 3.png';
 
 export const BenefitsContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     background: url(${mask3}) no-repeat top right 130px, linear-gradient(90.02deg, #7533b8 -1.1%, #56268c 99.97%);
     color: #ffffff;
     padding: 82px 20px;
@@ -14,6 +13,7 @@ export const BenefitsContainer = styled.div`
     overflow-x: hidden;
     
     @media (max-width: 768px) {
+        flex-direction: column;
         padding: 40px 16px;
         background: linear-gradient(90.02deg, #7533b8 -1.1%, #56268c 99.97%);
     }
@@ -22,7 +22,11 @@ export const BenefitsContainer = styled.div`
 export const Section1 = styled.div`
     width: 100%;
     max-width: 364px;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
     
     @media (max-width: 768px) {
         width: 100%;
@@ -35,6 +39,7 @@ export const Section2 = styled.div`
     
     @media (max-width: 768px) {
         width: 100%;
+        text-align: center;
     }
 `;
 
